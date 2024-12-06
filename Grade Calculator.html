@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.2em;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Grade Calculator</h1>
+    <p>Enter your marks to calculate your grade:</p>
+    
+    <!-- Input for marks -->
+    <input type="number" id="marks" placeholder="Enter marks (0-100)">
+    
+    <!-- Button to trigger grade calculation -->
+    <button onclick="calculateGrade()">Get Grade</button>
+    
+    <!-- Output for grade -->
+    <p id="result"></p>
+
+    <script>
+        function calculateGrade() {
+            // Get the value entered by the user
+            var marks = document.getElementById('marks').value;
+
+            // Validate that the input is a number between 0 and 100
+            if (marks >= 70 && marks <= 100) {
+                document.getElementById('result').innerHTML = "Grade: A";
+            } else if (marks >= 50 && marks < 70) {
+                document.getElementById('result').innerHTML = "Grade: C";
+            } else if (marks >= 0 && marks < 50) {
+                document.getElementById('result').innerHTML = "Grade: F";
+            } else {
+                document.getElementById('result').innerHTML = "Please enter a valid mark between 0 and 100.";
+            }
+        }
+    </script>
+
+</body>
+</html>
