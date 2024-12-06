@@ -1,0 +1,1 @@
+Using IF/ELSE statements, I created a grade calculator based on the following conditions Grade is A if mark is between 70 - 100, grade is C if mark is between 50 - 60, grade is F if mark is between 0 - 40
